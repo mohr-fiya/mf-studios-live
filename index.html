@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MF Studios</title>
+  
+<style>
+  #mf-splash {
+    position: fixed; inset: 0; display: grid; place-items: center;
+    background: var(--bg-primary, #BFA072); color: var(--text-primary, #223A5E);
+    z-index: 9999; transition: opacity .35s ease;
+  }
+  #mf-splash .inner {
+    background: var(--bg-secondary, #A68B65);
+    padding: 1.25rem 1.5rem; border-radius: 1rem;
+    box-shadow: var(--shadow-soft, 0 6px 20px rgba(0,0,0,0.08));
+    font-size: 1.125rem;
+  }
+</style>
+
+</head>
+  <body class="bg-graphite-900 text-zinc-100 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  
+<div id="mf-splash"><div class="inner">MF Studios — Loading…</div></div>
+<script>
+  window.addEventListener('load', ()=>{
+    const s = document.getElementById('mf-splash');
+    if (s) { s.style.opacity = '0'; setTimeout(()=>s.remove(), 380); }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --card: #232323;
+  --card-border: #2f2f2f;
+  --muted: rgb(156 163 175);
+  --ring: rgba(37, 99, 235, 0.45);
+}
+
+.card {
+  @apply bg-graphite-800 rounded-2xl shadow-soft border border-zinc-800;
+}
+.btn {
+  @apply inline-flex items-center justify-center rounded-2xl px-4 py-2 font-medium transition;
+}
+.btn-primary {
+  @apply bg-brand-500 hover:bg-brand-600 text-white ring-2 ring-transparent focus:ring-brand-400;
+}
+.btn-ghost {
+  @apply bg-transparent hover:bg-graphite-700 text-zinc-200;
+}
+.input {
+  @apply bg-graphite-700 border border-zinc-700 rounded-xl px-3 py-2 text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-brand-400;
+}
+.navlink {
+  @apply px-3 py-2 rounded-xl hover:bg-graphite-700 text-zinc-300;
+}
+.navlink-active {
+  @apply bg-graphite-700 text-white;
+}
+.kbd {
+  @apply font-mono text-xs bg-graphite-700 px-1.5 py-0.5 rounded border border-zinc-700;
+}
+
+/* MF Studios Theme (Admin + Colleague) */
+:root {
+  --bg-primary: #BFA072;     /* darkened beige */
+  --bg-secondary: #A68B65;   /* dark sand */
+  --text-primary: #223A5E;   /* deep navy blue */
+  --text-secondary: #4B5D73; /* slate blue */
+  --accent: #D9863A;         /* autumn orange */
+  --card-radius: 1rem;
+  --shadow-soft: 0 6px 20px rgba(0,0,0,0.08);
+  --divider: #9a7d52;
+  --font-scale-title: 1.25;
+  --font-scale-body: 1.10;
+}
+
+html, body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.card,
+.box,
+.panel {
+  background: var(--bg-secondary);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-soft);
+}
+
+h1, h2, h3 {
+  color: var(--text-primary);
+  font-size: calc(1rem * var(--font-scale-title) + 0.5vw);
+}
+
+p, li, input, button, label, span, a, td, th {
+  font-size: calc(1rem * var(--font-scale-body));
+  color: var(--text-secondary);
+}
+
+.button, button, .btn {
+  background: var(--accent);
+  color: #132238;
+  transition: transform .08s ease, box-shadow .12s ease;
+}
+
+.button:hover, button:hover, .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(0,0,0,.18);
+}
+
+.section-title, .card-title, .box-title, .panel-title {
+  border-bottom: 1px solid var(--divider);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
+}
